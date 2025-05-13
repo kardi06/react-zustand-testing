@@ -17,7 +17,10 @@ export default function Column({ state }) {
 
   return (
     <div className="column">
-      <p>{state}</p>
+      <div className="titleWrapper">
+        <p>{state}</p>
+        <button>Add</button>
+      </div>
       {filtered.map((task) => (
         <Task title={task.title} key={task.title} />
       ))}
